@@ -1,3 +1,5 @@
+### Ejercicio
+
 Somos esbirros de contraespionaje de Diabetisa SA, una corporación que fabrica chucherías y que compite con otro gran conglomerado alimentario, Megasucrón GmbH.
 
 Nuestro infiltrado en Megasucrón GmbH, antes de ser identificado, torturado y eliminado por operativos de seguridad corporativa, nos advirtió que Megasucrón estaba llevando a cabo un scrapeo con bots de los precios de algunas chucherías en nuestra web; nos gustaría saber qué chucherías consideran importantes.
@@ -14,15 +16,20 @@ Examinando estos datos y usando la cabeza,
 3. podemos estimar, a mano, qué número aproximado de nuestras visitas diarias se debe a bots y qué número a personas?
 4. podemos escribir un programa que, dado un array de tiempos de permanencia, devuelva `True` si está siendo scrapeada y `False` en otro caso?
 
-Herramientas conceptuales:
+### Herramientas conceptuales
+
 * El [histograma](https://en.wikipedia.org/wiki/Histogram) es la herramienta fundamental cuando te enfrentas a datos [univariados](https://en.wikipedia.org/wiki/Univariate_distribution) (y en otros casos también)
 * El concepto de [moda](https://en.wikipedia.org/wiki/Mode_(statistics)), [distribuciones multimodales](https://en.wikipedia.org/wiki/Multimodal_distribution)
+
+### Herramientas de implementación
 
 Vamos a empezar a tomar contacto con el stack moderno de python de computación científica, todo instalable con pip:
 * [jupyter notebook](https://jupyter.readthedocs.io/en/latest/install.html)
 * [numpy](https://numpy.org/)
 * [matplotlib](https://matplotlib.org/)
 * [pandas](https://pandas.pydata.org/)
+
+### Presentación de soluciones
 
 Notebook es muy útil para análisis de datos porque se puede mezclar código, gráficas y texto con poco esfuerzo; la solución será un notebook que subáis a vuestro github.
 
