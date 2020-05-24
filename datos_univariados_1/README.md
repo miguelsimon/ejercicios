@@ -6,6 +6,8 @@ Nuestro infiltrado en Megasucrón GmbH, antes de ser identificado, torturado y e
 
 Hemos recopilado, para cada página de nuestra web, los datos de tiempo de presencia por visita durante 1 día: para cada visita, guardamos los segundos de permanencia en la página.
 
+Estos datos se encuentran en el directorio [data/](data).
+
 Examinando estos datos y usando la cabeza,
 
 0. vamos a cargar los datos de csv en un formato conveniente, eg. ndarray de numpy o DataFrame de pandas
