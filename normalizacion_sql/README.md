@@ -16,7 +16,7 @@ Actualmente, usa la siguiente base de datos (cortar y pegar en línea de comando
 
 ```sql
 create table people (
-  dni primary key,
+  dni varchar primary key,
   firstname varchar,
   lastname varchar,
   address_1 varchar,
