@@ -1,4 +1,7 @@
 * [Ejercicio](#ejercicio)
+  * [Pregunta 1](#pregunta-1)
+  * [Pregunta 2](#pregunta-2)
+  * [Pregunta 3](#pregunta-3)
 * [Herramientas conceptuales](#herramientas-conceptuales)
 * [Herramientas de implementación](#herramientas-de-implementación)
 * [Presentación de soluciones](#presentación-de-soluciones)
