@@ -7,3 +7,4 @@ Son ejercicios autocontenidos y sencillos; solemos plantearlos al principio de l
 * [normalización de sql](normalizacion_sql)
 * [queries de sql](queries_sql)
 * [análisis de datos univariados 1](datos_univariados_1)
+* [análisis de datos univariados 2](datos_univariados_2): métodos de Monte Carlo

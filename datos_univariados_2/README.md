@@ -24,7 +24,7 @@ La empresa tiene 14 analistas en plantilla; hemos mirado el histórico, y hemos 
 
 ### Herramientas conceptuales
 
-Este ejercicio es una introducción a los [métodos de Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method).
+Este ejercicio es una introducción a los [métodos de Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method). Estamos analizando datos univariados como en [el ejercicio anterior](../datos_univariados_1), solo que esta vez estos datos los estamos generando nosotros vía simulaciones de Monte Carlo.
 
 Ver [intro.ipynb](intro.ipynb) con ejercicios introductorios.
 
