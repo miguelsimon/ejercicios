@@ -10,7 +10,7 @@
 
 **Dimensionado de servidores**
 
-Tenemos una empresa que diseña bombas de agua. Como parte de su trabajo, los analistas de vez en cuando tienen que ejecutar [simulaciones de FEA](https://en.wikipedia.org/wiki/Finite_element_method), que ejecutan como jobs en nodos de computación de un proveedor de cloud.
+Tenemos una empresa que diseña bombas de agua. Como parte de su trabajo, los analistas de vez en cuando tienen que ejecutar [simulaciones de FEA](https://en.wikipedia.org/wiki/Finite_element_method) complejas, que ejecutan como jobs en nodos de computación de un proveedor de cloud.
 
 Los nodos de computación:
 * se reservan al día con la siguiente estructura de pricing
@@ -48,7 +48,7 @@ Ver [intro.ipynb](intro.ipynb) con explicación y ejercicios introductorios.
 
 Los métodos de Monte Carlo son tremendamente útiles sobre todo para los programadores, ya que hay preguntas que son muy fáciles de responder programando simulaciones sencillas pero muy difíciles de responder de forma analítica: si ya sabes programar tienes más de la mitad del trabajo hecho.
 
-Adicionalemente, revisar:
+Adicionalmente, revisar:
 
 * [concepto de esperanza](https://en.wikipedia.org/wiki/Expected_value)
 * [concepto de percentil](https://en.wikipedia.org/wiki/Percentile)
