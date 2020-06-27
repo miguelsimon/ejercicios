@@ -1,4 +1,11 @@
-### Ejercicio: dimensionado de servidores
+* [Ejercicio](ejercicio)
+* [Herramientas conceptuales](herramientas-conceptuales)
+* [Herramientas de implementación](herramientas-de-implementacion)
+* [Presentación de soluciones](presentacion-de-soluciones)
+
+### Ejercicio
+
+**Dimensionado de servidores**
 
 Tenemos una empresa que diseña bombas de agua. Como parte de su trabajo, los analistas de vez en cuando tienen que ejecutar [simulaciones de FEA](https://en.wikipedia.org/wiki/Finite_element_method), que ejecutan como jobs en nodos de computación de un proveedor de cloud.
 
