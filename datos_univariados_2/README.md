@@ -10,23 +10,31 @@ Los nodos de computación:
 
 Ej. si en un día reservamos 3 nodos, nos cobran `130 + 130 + 110` euros.
 
-La empresa tiene 14 analistas en plantilla; hemos mirado el histórico, y hemos determinado que la probabilidad de que un analista tenga que ejecutar una simulación de FEA en un día dado es de $0.156$.
+La empresa tiene 14 analistas en plantilla; hemos mirado el histórico, y hemos determinado que la probabilidad de que un analista tenga que ejecutar una simulación de FEA en un día dado es de `0.156`.
 
-1. cuánto es el máximo que podemos llegar a pagar en un día por los servidores?
-2. cuál es el coste medio por día que esperamos tener que pagar por los servidores?
-3. El departamento de contabilidad exige que cerremos el presupuesto diario por adelantado, para pedir un préstamo para financiar las operaciones del mes siguiente.
+#### Pregunta 1
 
-  No podemos pagar suficiente para garantizar que **nunca** se quede nadie sin servicio.
+¿Cuánto es el máximo que podemos llegar a pagar en un día por los servidores?
 
-  Hemos decidido que vamos bien si el `90%` de los diás todos los jobs de FEA encolados acaban, es aceptable que se queden jobs sin acabar en un `10%` de los días.
+#### Pregunta 2
 
-  Cuánto es lo mínimo que tenemos que pagar al proveedor de cloud al día para obtener este nivel de servicio?
+¿Cuál es el coste medio por día que esperamos tener que pagar por los servidores?
+
+#### Pregunta 3
+
+El departamento de contabilidad exige que cerremos el presupuesto diario por adelantado, para pedir un préstamo para financiar las operaciones del mes siguiente.
+
+No podemos pagar suficiente para garantizar que **nunca** se quede nadie sin servicio.
+
+Hemos decidido que vamos bien si el `90%` de los diás todos los jobs de FEA encolados acaban, es aceptable que se queden jobs sin acabar en un `10%` de los días.
+
+¿Cuánto es lo mínimo que tenemos que pagar al proveedor de cloud al día para obtener este nivel de servicio?
 
 ### Herramientas conceptuales
 
 Este ejercicio es una introducción a los [métodos de Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method). Estamos analizando datos univariados como en [el ejercicio anterior](../datos_univariados_1), solo que esta vez estos datos los estamos generando nosotros vía simulaciones de Monte Carlo.
 
-Ver [intro.ipynb](intro.ipynb) con ejercicios introductorios.
+Ver [intro.ipynb](intro.ipynb) con explicación y ejercicios introductorios.
 
 Los métodos de Monte Carlo son tremendamente útiles sobre todo para los programadores, ya que hay preguntas que son muy fáciles de responder programando simulaciones sencillas pero muy difíciles de responder de forma analítica: si ya sabes programar tienes más de la mitad del trabajo hecho.
 
