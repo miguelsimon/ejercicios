@@ -1,7 +1,7 @@
-* [Ejercicio](ejercicio)
-* [Herramientas conceptuales](herramientas-conceptuales)
-* [Herramientas de implementación](herramientas-de-implementacion)
-* [Presentación de soluciones](presentacion-de-soluciones)
+* [Ejercicio](#ejercicio)
+* [Herramientas conceptuales](#herramientas-conceptuales)
+* [Herramientas de implementación](#herramientas-de-implementacion)
+* [Presentación de soluciones](#presentacion-de-soluciones)
 
 ### Ejercicio
 
