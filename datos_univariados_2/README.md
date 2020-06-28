@@ -2,6 +2,7 @@
   * [Pregunta 1](#pregunta-1)
   * [Pregunta 2](#pregunta-2)
   * [Pregunta 3](#pregunta-3)
+  * [Pregunta 4](#pregunta-4)
 * [Herramientas conceptuales](#herramientas-conceptuales)
 * [Herramientas de implementación](#herramientas-de-implementación)
 * [Presentación de soluciones](#presentación-de-soluciones)
@@ -18,7 +19,7 @@ Los nodos de computación:
   * a partir de 2 nodos reservados, nos hacen un descuento por volumen y cada nodo adicional vale 110 euros/día
 * cada nodo puede procesar un máximo de 3 jobs de FEA en un día
 
-Ej. si en un día reservamos 3 nodos, nos cobran `130 + 130 + 110` euros.
+Ej. si en un día reservamos 3 nodos, nos cobran `130 + 130 + 110` euros. Si en un día tenemos que procesar 4 jobs, nos harán falta 2 nodos, si tenemos que procesar 6 jobs también basta con 2 nodos, si tenemos que procesar 7 jobs harán falta 3 nodos.
 
 La empresa tiene 14 analistas en plantilla; hemos mirado el histórico, y hemos determinado que la probabilidad de que un analista tenga que ejecutar una simulación de FEA en un día dado es de `0.156`.
 
@@ -28,17 +29,27 @@ La empresa tiene 14 analistas en plantilla; hemos mirado el histórico, y hemos 
 
 #### Pregunta 2
 
-¿Cuál es el coste medio por día que esperamos tener que pagar por los servidores?
+Pinta un histograma de los costes diarios realizando simulaciones de Monte Carlo.
+
+¿Cuál es el coste medio por día que esperamos tener que pagar por los servidores, si siempre pagamos todos los servidores que hacen falta en un día dado?
 
 #### Pregunta 3
 
+Supongamos que siempre pagamos todos los servidores que hacen falta en un día dado.
+
+Pinta un histograma de los gastos semanales realizando experimentos de Monte Carlo.
+
+¿Cuál es la probabilidad que el gasto en una semana laborable (5 días) supere los 900 euros?
+
+#### Pregunta 4
+
 El departamento de contabilidad exige que cerremos el presupuesto diario por adelantado, para pedir un préstamo para financiar las operaciones del mes siguiente.
 
-No podemos pagar suficiente para garantizar que **nunca** se quede nadie sin servicio.
+No podemos pagar suficiente para **garantizar** que **nunca** se quede nadie sin servicio.
 
-Hemos decidido que vamos bien si el `90%` de los diás todos los jobs de FEA encolados acaban, es aceptable que se queden jobs sin acabar en un `10%` de los días.
+Hemos decidido que vamos bien si el `90%` de los diás todos los jobs de FEA encolados acaban: es aceptable que se queden jobs sin acabar en un `10%` de los días.
 
-¿Cuánto es lo mínimo que tenemos que pagar al proveedor de cloud al día para obtener este nivel de servicio?
+¿Cuánto es lo mínimo que tenemos que pagar al día para tener una probabilidad del 90% de tener capacidad para todos los jobs?
 
 ### Herramientas conceptuales
 
