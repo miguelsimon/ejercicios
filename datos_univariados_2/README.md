@@ -7,6 +7,8 @@
 * [Herramientas de implementación](#herramientas-de-implementación)
 * [Presentación de soluciones](#presentación-de-soluciones)
 
+![casino_royale](casino_royale.jpg)
+
 ### Ejercicio
 
 **Dimensionado de servidores**
@@ -17,11 +19,13 @@ Los nodos de computación:
 * se reservan al día con la siguiente estructura de pricing
   * un nodo vale 130 euros/día
   * a partir de 2 nodos reservados, nos hacen un descuento por volumen y cada nodo adicional vale 110 euros/día
-* cada nodo puede procesar un máximo de 3 jobs de FEA en un día
+* cada nodo tiene capacidad para procesar 72 horas-cpu al día
 
-Ej. si en un día reservamos 3 nodos, nos cobran `130 + 130 + 110` euros. Si en un día tenemos que procesar 4 jobs, nos harán falta 2 nodos, si tenemos que procesar 6 jobs también basta con 2 nodos, si tenemos que procesar 7 jobs harán falta 3 nodos.
+Ej. si en un día reservamos 3 nodos, nos cobran `130 + 130 + 110` euros.
 
 La empresa tiene 14 analistas en plantilla; hemos mirado el histórico, y hemos determinado que la probabilidad de que un analista tenga que ejecutar una simulación de FEA en un día dado es de `0.156`.
+
+También mirando el histórico, nos hemos dado cuenta que los requisitos de horas-cpu por job de FEA siguen una [distribución uniforme](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous): un job necesita entre 15.7 y 33.1 horas-cpu de computación.
 
 #### Pregunta 1
 
@@ -29,7 +33,7 @@ La empresa tiene 14 analistas en plantilla; hemos mirado el histórico, y hemos 
 
 #### Pregunta 2
 
-Pinta un histograma de los costes diarios realizando simulaciones de Monte Carlo.
+Pinta un histograma de la distribución de los costes diarios realizando simulaciones de Monte Carlo.
 
 ¿Cuál es el coste medio por día que esperamos tener que pagar por los servidores, si siempre pagamos todos los servidores que hacen falta en un día dado?
 
@@ -37,7 +41,7 @@ Pinta un histograma de los costes diarios realizando simulaciones de Monte Carlo
 
 Supongamos que siempre pagamos todos los servidores que hacen falta en un día dado.
 
-Pinta un histograma de los gastos semanales realizando experimentos de Monte Carlo.
+Pinta un histograma de la distribución de los gastos semanales realizando experimentos de Monte Carlo.
 
 ¿Cuál es la probabilidad que el gasto en una semana laborable (5 días) supere los 900 euros?
 
