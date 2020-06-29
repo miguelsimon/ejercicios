@@ -25,7 +25,7 @@ Ej. si en un día reservamos 3 nodos, nos cobran `130 + 130 + 110` euros.
 
 La empresa tiene 14 analistas en plantilla; hemos mirado el histórico, y hemos determinado que la probabilidad de que un analista tenga que ejecutar una simulación de FEA en un día dado es de `0.156`.
 
-También mirando el histórico, nos hemos dado cuenta que los requisitos de horas-cpu por job de FEA siguen una [distribución uniforme](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous): un job necesita entre 15.7 y 33.1 horas-cpu de computación.
+También mirando el histórico, nos hemos dado cuenta que los requisitos de horas-cpu por job de FEA siguen una [distribución uniforme](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)): un job necesita entre 15.7 y 33.1 horas-cpu de computación.
 
 #### Pregunta 1
 
