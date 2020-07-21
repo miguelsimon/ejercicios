@@ -51,9 +51,9 @@ El departamento de contabilidad exige que cerremos el presupuesto diario por ade
 
 No podemos pagar suficiente para **garantizar** que **nunca** se quede nadie sin servicio.
 
-Hemos decidido que vamos bien si el `90%` de los diás todos los jobs de FEA encolados acaban: es aceptable que se queden jobs sin acabar en un `10%` de los días.
+Hemos decidido que vamos bien si como mínimo el `90%` de los diás todos los jobs de FEA encolados acaban: es aceptable que se queden jobs sin acabar en un máximo de un `10%` de los días.
 
-¿Cuánto es lo mínimo que tenemos que pagar al día para tener una probabilidad del 90% de tener capacidad para todos los jobs?
+¿Cuánto es lo mínimo que tenemos que pagar al día para tener una probabilidad como mínimo del 90% de tener capacidad para todos los jobs?
 
 ### Herramientas conceptuales
 
