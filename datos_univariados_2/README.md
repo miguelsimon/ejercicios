@@ -47,11 +47,11 @@ Pinta un histograma de la distribución de los gastos semanales realizando exper
 
 #### Pregunta 4
 
-El departamento de contabilidad exige que cerremos el presupuesto diario por adelantado, para pedir un préstamo para financiar las operaciones del mes siguiente.
+El departamento de contabilidad exige que cerremos el presupuesto diario por adelantado.
 
 No podemos pagar suficiente para **garantizar** que **nunca** se quede nadie sin servicio.
 
-Hemos decidido que vamos bien si como mínimo el `90%` de los diás todos los jobs de FEA encolados acaban: es aceptable que se queden jobs sin acabar en un máximo de un `10%` de los días.
+Hemos decidido que es aceptable si en un día dado la probabilidad de que acaben todos los jobs es como mínimo del 90%.
 
 ¿Cuánto es lo mínimo que tenemos que pagar al día para tener una probabilidad como mínimo del 90% de tener capacidad para todos los jobs?
 
