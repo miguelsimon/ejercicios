@@ -1,8 +1,17 @@
+* [Ejercicio](#Ejercicio)
+* [Preguntas](#Preguntas)
+  * [Preguntas](#Preguntas)
+    * [Pregunta 0](#Pregunta-0)
+        * [Respuesta 0](#Respuesta-0)
+    * [Pregunta 1](#Pregunta-1)
+    * [Pregunta 2](#Pregunta-2)
+    * [Pregunta 3](#Pregunta-3)
+
 ### Ejercicio
 
 Vamos a describir el estado de un repositorio de git de forma simplificada, tiene 2 partes importantes:
 
-* el árbol de commits, que es lo que guarda [la base de datos de snapshots de git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
+* el árbol de commits, que es lo que guarda [la base de datos de snapshots de git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F) En el diagrama, cada commit apunta a su(s) padre(s).
 * la tabla de [branches](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell), que dice qué branches tenemos y a qué commits apuntan
 
 En un repositorio local, además tenemos:
