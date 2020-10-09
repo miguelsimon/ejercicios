@@ -28,6 +28,8 @@ Hemos empezado a trabajar en un proyecto de git y está en este estado (seguimos
 
 **Todas las preguntas empiezan con el estado inicial descrito arriba**, no son cambios cumulativos.
 
+Los diagramas son svg así que se pueden editar fácilmente con [inkscape](https://inkscape.org/); hacer un diagrama a mano y subir una foto también es una opción.
+
 #### Pregunta 0
 
 (Ejemplo) Supongamos que hacemos unos cambios y ejecutamos `git commit -m "Better idea"`:
