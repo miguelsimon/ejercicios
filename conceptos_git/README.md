@@ -72,3 +72,5 @@ git reset --hard master
 ```
 
 Cambia el diagrama para representar el nuevo estado del repositorio.
+
+Jon Ander was here.
