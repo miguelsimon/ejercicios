@@ -50,7 +50,7 @@ git branch another-idea
 git checkout another-idea
 ```
 
-Cambia el diagrama para representar el nuevo estado del repositorio.
+Cambia el diagrama para representar el nuevo estado del repositorio: tanto el grafo de commits como la tabla de branches pueden cambiar.
 
 #### Pregunta 2
 
@@ -61,7 +61,7 @@ git checkout master
 git merge idea
 ```
 
-Cambia el diagrama para representar el nuevo estado del repositorio.
+Cambia el diagrama para representar el nuevo estado del repositorio: tanto el grafo de commits como la tabla de branches pueden cambiar.
 
 #### Pregunta 3
 
@@ -71,6 +71,6 @@ Nos hemos bebido un par de botellas de vino y ejecutamos
 git reset --hard master
 ```
 
-Cambia el diagrama para representar el nuevo estado del repositorio.
+Cambia el diagrama para representar el nuevo estado del repositorio: tanto el grafo de commits como la tabla de branches pueden cambiar.
 
 Marta was here4
