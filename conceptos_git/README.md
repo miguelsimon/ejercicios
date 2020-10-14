@@ -74,3 +74,4 @@ git reset --hard master
 Cambia el diagrama para representar el nuevo estado del repositorio: tanto el grafo de commits como la tabla de branches pueden cambiar.
 
 Marta was here4
+Jon Ander was here2
