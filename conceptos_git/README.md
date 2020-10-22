@@ -53,7 +53,7 @@ git checkout another-idea
 Cambia el diagrama para representar el nuevo estado del repositorio: tanto el grafo de commits como la tabla de branches pueden cambiar.
 
 #### Respuesta 1
-![ejercicio_git_ejemplo](media/respuesta-01.svg)
+![ejercicio_git_ejemplo](media/respuesta-01.jpg)
 
 #### Pregunta 2
 
@@ -67,7 +67,7 @@ git merge idea
 Cambia el diagrama para representar el nuevo estado del repositorio: tanto el grafo de commits como la tabla de branches pueden cambiar.
 
 #### Respuesta 2
-![ejercicio_git_ejemplo](media/respuesta-02.svg)
+![ejercicio_git_ejemplo](media/respuesta-02.jpg)
 
 #### Pregunta 3
 
@@ -80,4 +80,4 @@ git reset --hard master
 Cambia el diagrama para representar el nuevo estado del repositorio: tanto el grafo de commits como la tabla de branches pueden cambiar.
 
 #### Respuesta 3
-![ejercicio_git_ejemplo](media/respuesta-03.svg)
+![ejercicio_git_ejemplo](media/respuesta-03.jpg)
