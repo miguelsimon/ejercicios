@@ -1,3 +1,58 @@
-h1 {
-    color: blue;
+body{
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.header div{
+  display: inline-block;
+}
+
+.header{
+  border-bottom: 1px solid black;
+}
+
+.logo h1{
+  color: #FF1818;
+  font-size: 50px;
+  font-weight: bold;
+  max-width:
+}
+
+.menu li{
+  font-size: 42px;
+  display: inline-block;
+}
+
+.menu a:hover{
+  opacity: 0.5;
+}
+
+.menu li a{
+  color: black;
+  text-decoration: none;
+  padding: 0px 40px;
+}
+
+h2{
+  font-size: 42px;
+  font-weight: bold;
+}
+
+h3{
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.imagenes p{
+  color: #093FFF;
+  font-size: 30px;
+}
+
+.imagenes img{
+  transition: all 0.2s ease-in-out ;
+}
+
+.imagenes img:hover{
+  box-shadow: 0px 24px 44px rgba(0, 0, 0, 0.25);
+  transform: translateY(-20px);
 }
