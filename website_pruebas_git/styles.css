@@ -12,10 +12,16 @@ body{
 }
 
 .logo h1{
-  color: #FF1818;
   font-size: 50px;
   font-weight: bold;
-  max-width:
+}
+.logo h1 a{
+  text-decoration: none;
+  color: #FF1818;
+}
+
+.logo h1 a:hover{
+  opacity: 0.5;
 }
 
 .menu li{
@@ -49,7 +55,8 @@ h3{
 }
 
 .imagenes img{
-  transition: all 0.2s ease-in-out ;
+  transition: all 0.2s ease-in-out;
+  width: 600px;
 }
 
 .imagenes img:hover{
