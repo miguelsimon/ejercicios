@@ -55,7 +55,8 @@ h3{
 }
 
 .imagenes img{
-  transition: all 0.2s ease-in-out ;
+  transition: all 0.2s ease-in-out;
+  width: 600px;
 }
 
 .imagenes img:hover{
