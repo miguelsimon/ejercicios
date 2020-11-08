@@ -6,6 +6,7 @@ Son ejercicios autocontenidos y sencillos; solemos plantearlos al principio de l
 
 * [análisis de datos univariados 1](datos_univariados_1)
 * [análisis de datos univariados 2](datos_univariados_2): métodos de Monte Carlo
+* [análisis de datos univariados 3](datos_univariados_3): comparación de distribuciones
 * [conceptos git](conceptos_git)
 * [normalización de sql](normalizacion_sql)
 * [queries de sql](queries_sql)
