@@ -20,9 +20,10 @@ El proceso de fabricación de un Trasto pasa por los siguientes pasos:
 1. Calentamiento: Un trozo de metal inmenso se calienta hasta ponerlo al rojo vivo, coste: 1000 euros
 2. Forjado: el trozo de metal se martillea en una forja hidráulica hasta que adquiere la forma adecuada, coste: 10 euros
 3. Inspección: un robot inspecciona el Trasto para ver si cumple las especificaciones
-  * si la inspección tarda menos de 13 minutos y se encuentra un defecto, vuelve al paso 2, el martilleo lo mantendrá caliente
-  * si la inspección tarda más de 13 minutos y se encuentra un defecto, se ha enfriado demasiado y hay que volver al paso 1
-  coste de la inspección: 5 euros
+   - si la inspección tarda menos de 13 minutos y se encuentra un defecto, vuelve al paso 2, el martilleo lo mantendrá caliente
+   - si la inspección tarda más de 13 minutos y se encuentra un defecto, se ha enfriado demasiado y hay que volver al paso 1
+
+   coste de la inspección: 5 euros
 
 La tasa de error en el forjado es del 20%: un 20% de forjados salen defectuosos y hay que volver a intentarlo.
 
