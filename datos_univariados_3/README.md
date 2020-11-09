@@ -59,7 +59,7 @@ Como siempre que tengamos datos de este tipo, vamos a usar las herramientas est�
 * Comparamos [histogramas](https://en.wikipedia.org/wiki/Histogram)
 * Comparamos cuartiles y min-max, ej. pintando un [box plot con whiskers](https://en.wikipedia.org/wiki/Box_plot)
 
-Podemos usar [experimentos de Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method) para estimar esperanzas con respecto a la tasa de fallo, o también podemos usar métodos de suma de series.
+Podemos usar [experimentos de Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method) para estimar esperanzas con respecto a la tasa de fallo, o también podemos usar métodos de suma de series o [fixed point iteration](https://en.wikipedia.org/wiki/Fixed-point_iteration) si no apetece programar.
 
 ## Herramientas de implementación
 
@@ -69,6 +69,6 @@ Usando esto, cosas como cargar csvs y pintar histogramas son oneliners; eg. `pan
 
 ## Presentación de soluciones
 
-Como la vez anterior, se hacen forks del repo y cada uno commitea su solución en su fork para luego presentarlas en común.
+Como la vez anterior, se hacen forks del repo y cada uno commitea su solución en su fork para luego presentarlas en común; nos esperamos a subirlas hasta el día de presentación de resultados para no condicionar las soluciones de los demás.
 
 La solución al ejercicio deberá ponerse en un notebook llamado `solution.ipynb`.
