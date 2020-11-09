@@ -17,7 +17,7 @@ Nadie sabe exactamente para qué sirven, pero son enormes y cuesta mucho fabrica
 
 El proceso de fabricación de un Trasto pasa por los siguientes pasos:
 
-1. Calentamiento: Un trozo de metal inmenso se calienta hasta ponerlo al rojo vivo, coste: 1000 euros
+1. Calentamiento: un trozo de metal inmenso se calienta hasta ponerlo al rojo vivo, coste: 1000 euros
 2. Forjado: el trozo de metal se martillea en una forja hidráulica hasta que adquiere la forma adecuada, coste: 10 euros
 3. Inspección: un robot inspecciona el Trasto para ver si cumple las especificaciones
    - si la inspección tarda menos de 13 minutos y se encuentra un defecto, vuelve al paso 2, el martilleo lo mantendrá caliente
@@ -59,7 +59,9 @@ Como siempre que tengamos datos de este tipo, vamos a usar las herramientas est�
 * Comparamos [histogramas](https://en.wikipedia.org/wiki/Histogram)
 * Comparamos cuartiles y min-max, ej. pintando un [box plot con whiskers](https://en.wikipedia.org/wiki/Box_plot)
 
-Podemos usar [experimentos de Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method) para estimar esperanzas con respecto a la tasa de fallo, o también podemos usar métodos de suma de series o [fixed point iteration](https://en.wikipedia.org/wiki/Fixed-point_iteration) si no apetece programar.
+Podemos usar [experimentos de Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method) para estimar esperanzas con respecto a la tasa de fallo.
+
+También podemos examinar [la estructura del problema de calcular la esperanza](https://en.wikipedia.org/wiki/Overlapping_subproblems) y aplicar [técnicas con papel y lápiz](https://en.wikipedia.org/wiki/Fixed_point_(mathematics) si no apetece programar.
 
 ## Herramientas de implementación
 
