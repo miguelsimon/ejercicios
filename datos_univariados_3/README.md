@@ -27,7 +27,7 @@ El proceso de fabricación de un Trasto pasa por los siguientes pasos:
 
 La tasa de error en el forjado es del 20%: un 20% de forjados salen defectuosos y hay que volver a intentarlo.
 
-Estamos evaluando 2 robots distintos para llevar a cabo la inspección, y para compararlos hemos medido lo que tardan en inspeccionar bastantes trastos cada uno:
+Estamos evaluando 2 robots distintos para llevar a cabo la inspección, y para compararlos hemos medido lo que tardan en inspeccionar bastantes trastos cada uno con modelos que nos han prestado los fabricantes:
 
 * robot A: tiempos para inspeccionar 889 trastos en [robot_A.csv](robot_A.csv)
 * robot B: tiempos para inspeccionar 912 trastos en [robot_B.csv](robot_B.csv)
@@ -48,7 +48,7 @@ Los robots valen exactamente lo mismo, y el tiempo que tardan en inspeccionar un
 
 ### Pregunta 3
 
-* ¿Cuál es el coste medio de fabricación por Trasto si usamos inspectores humanos que *siempre* tardan más de 20 minutos en inspeccionar un Trasto?
+* ¿Cuál es el coste medio de fabricación por Trasto si usamos inspectores humanos que *siempre* tardan más de 20 minutos en inspeccionar un Trasto? Una inspección humana también cuesta 5 euros.
 * ¿Cuál es el coste medio de fabricación por Trasto si usamos el robot A?
 * ¿Cuál es el coste medio de fabricación por Trasto si usamos el robot B?
 
