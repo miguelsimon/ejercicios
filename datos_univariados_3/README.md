@@ -61,7 +61,7 @@ Como siempre que tengamos datos de este tipo, vamos a usar las herramientas est�
 
 Podemos usar [experimentos de Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method) para estimar esperanzas con respecto a la tasa de fallo.
 
-También podemos examinar [la estructura del problema de calcular la esperanza](https://en.wikipedia.org/wiki/Overlapping_subproblems) y aplicar [técnicas con papel y lápiz](https://en.wikipedia.org/wiki/Fixed_point_(mathematics) si no apetece programar.
+También podemos examinar [la estructura del problema de calcular la esperanza](https://en.wikipedia.org/wiki/Overlapping_subproblems) y aplicar [técnicas con papel y lápiz](https://en.wikipedia.org/wiki/Fixed_point_(mathematics)) si no apetece programar.
 
 ## Herramientas de implementación
 
