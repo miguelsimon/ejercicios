@@ -32,7 +32,7 @@ Estamos evaluando 2 robots distintos para llevar a cabo la inspección, y para c
 * robot A: tiempos para inspeccionar 889 trastos en [robot_A.csv](robot_A.csv)
 * robot B: tiempos para inspeccionar 912 trastos en [robot_B.csv](robot_B.csv)
 
-Los robots valen exactamente lo mismo, y el tiempo que tardan en inspeccionar un Trasto es independiente de si hay un defecto o no.
+Los robots valen exactamente lo mismo. Los tiempos de cada inspección son independientes de la presencia de un defecto, del trasto inspeccionado o de lo que tardó la inspección anterior.
 
 ### Pregunta 0
 
@@ -44,7 +44,7 @@ Los robots valen exactamente lo mismo, y el tiempo que tardan en inspeccionar un
 
 ### Pregunta 2
 
-¿Qué robot debemos de comprar para llevar a cabo las inspecciones de Trastos minimizando costes de producción?
+¿Qué robot debemos de comprar para minimizar los costes de producción?
 
 ### Pregunta 3
 
