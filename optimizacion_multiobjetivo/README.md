@@ -55,7 +55,7 @@ Una vez tenemos el grafo es fácil encontrar la frontera de pareto: **valduero**
 
 Ahora habrá que ver cómo decidimos entre `valduero` y `brik_don_simon`: el criterio de pareto-dominancia no nos ayudará aquí, necesitamos otro criterio.
 
-Por ejemplo, si somos Bill Gates probablemente nos importa más el precio que el sabor; si dormimos en la calle, probablemente el precio es más importante.
+Por ejemplo, si somos Bill Gates probablemente nos importa más el sabor; si dormimos en la calle, probablemente el precio es más importante.
 
 **El criterio de pareto-dominancia nos ha permitido simplificar el problema descartando `vega_sicilia` y `carrefour`**, que no es poco. Da igual que seamos Bill Gates o que durmamos en la calle: las soluciones pareto-dominadas son inferiores.
 
