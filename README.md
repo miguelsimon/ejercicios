@@ -11,4 +11,5 @@ Son ejercicios autocontenidos y sencillos; solemos plantearlos al principio de l
 * [normalización de sql](normalizacion_sql)
 * [intro a async/await en python 3](python_async_intro)
 * [queries de sql](queries_sql)
+* [optimización multiobjetivo](optimizacion_multiobjetivo)
 * [website_pruebas_git](website_pruebas_git): web estática para ensayar PRs y workflow de git trabajando sobre ella
