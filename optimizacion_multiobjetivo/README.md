@@ -1,3 +1,5 @@
+## Overview
+
 Hay muchos problemas donde hay más de una dimensión a optimizar y las dimensiones no se pueden comparar fácilmente entre sí.
 
 Por ejemplo, si compramos un vino nos interesa encontrar un vino que tenga buen sabor y bajo coste, pero no está claro como comparar las dimensiones de sabor y coste entre sí: cuantas "unidades de sabor" equivalen a 1 euro?
