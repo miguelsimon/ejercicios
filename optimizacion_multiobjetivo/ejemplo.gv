@@ -1,0 +1,10 @@
+digraph  {
+  rankdir=LR;
+
+  brik_don_simon [style=filled, fillcolor=lightgreen];
+  valduero [style=filled, fillcolor=lightgreen];
+
+  valduero -> vega_sicilia;
+  vega_sicilia -> carrefour;
+  valduero -> carrefour;
+}
