@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Seek</title>
+
+    <style type="text/css">
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.js" integrity="sha512-TDWaR4Jcfh+czIclPCKBKsZvP3+R8jyYdHSV0bEdi/drluprR/2nx6jCpirVB21A0O86coRGKO033FR2/r4s2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <h3> Seek </h3>
+    En el comportamiento <b>seek</b>, el actor (círculo pequeño) intenta mantener una velocidad constante en la dirección del objetivo (círculo grande). Ambos se pueden manipular con el ratón.
+    <br/>
+    <br/>
+    En cada paso de simulación, la función <code>beforeUpdate()</code> calcula la fuerza a aplicar al actor para minimizar la diferencia entre la velocidad del actor y la velocidad objetivo del comportamiento <b>seek</b>.
+    <br/>
+    <br/>
+    <div id="canvas"></div>
+
+    <script>
+    var Engine = Matter.Engine,
+        Events = Matter.Events,
+        Render = Matter.Render,
+        Runner = Matter.Runner,
+        Vector = Matter.Vector,
+        Body = Matter.Body,
+        Bodies = Matter.Bodies,
+        MouseConstraint = Matter.MouseConstraint,
+        Mouse = Matter.Mouse,
+        Composite = Matter.Composite;
+
+    var engine =  Engine.create({gravity: {x:0, y: 0}});
+
+    var target = Bodies.circle(200, 200, 10, {isSensor: true, frictionAir: 0.1});
+    Composite.add(engine.world, target);
+
+    var actor = Bodies.circle(400, 400, 5, {frictionAir: 0});
+    Composite.add(engine.world, actor);
+
+    // gather all state information into a dictionary
+    var state = {
+      engine: engine,
+      target: target,
+      actor: actor,
+      desired_speed: 5,
+      max_accel: 0.001,
+    };
+
+    // callback before each physics update
+    function beforeUpdate(event) {
+      // seek behaviour solves the following problem:
+      //
+      // direction = (target_p - p) / || target_p - p ||
+      // desired_v = desired_speed * direction
+      //
+      // minimize || desired_v - (v + a * dt) ||
+      // s.t || a || < max_accel
+
+      // a = (desired_v - v) / dt
+
+      const p = state.actor.position;
+      const v = state.actor.velocity;
+      const target_p = state.target.position;
+
+      const dt = event.source.delta / 1000; //get simulation timestep size in seconds
+
+      const direction = Vector.normalise(Vector.sub(target_p, p));
+      const desired_v = Vector.mult(direction, state.desired_speed);
+
+      const delta_v = Vector.sub(desired_v, v)
+
+      const desired_a = Vector.div(delta_v, dt);
+      const a_magnitude = Vector.magnitude(desired_a);
+      const mag = Math.min(a_magnitude, state.max_accel);
+
+      const a = Vector.mult(Vector.normalise(desired_a), mag);
+      const f = Vector.mult(a, state.actor.mass);
+
+      state.actor.force = f;
+      console.log(event.source.delta);
+
+    }
+
+    // set up rendering
+    var render = Render.create({
+        element: canvas,
+        engine: state.engine,
+        options: {
+          wireframes: true
+        }
+    });
+
+    // set up mouse interaction with the world
+
+    var mouse = Mouse.create(render.canvas),
+        mouseConstraint = MouseConstraint.create(state.engine, {
+            mouse: mouse,
+            constraint: {
+                stiffness: 0.1,
+                render: {
+                    visible: false
+                }
+            }
+        });
+
+    Composite.add(state.engine.world, mouseConstraint);
+
+    // keep the mouse in sync with rendering
+    render.mouse = mouse;
+
+    Render.run(render);
+
+    var runner = Runner.create();
+    Events.on(runner, "beforeUpdate", beforeUpdate);
+
+    Runner.run(runner, state.engine);
+
+    </script>
+  </body>
+</html>
