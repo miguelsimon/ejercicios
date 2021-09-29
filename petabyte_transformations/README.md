@@ -50,7 +50,7 @@ Escribir un programa que haga exactamente lo mismo, pero usando [apache Beam](ht
 
 Esto consiste en expresar el problema en términos de PCollections y de PTransforms, un proceso que puede ser algo tedioso y requerirá bucear en los docs.
 
-Si expresamos el programa usando beam Beam, podemos usar su runner para [google Dataflow](https://cloud.google.com/dataflow) y escalar trivialmente a miles de instancias.
+Si expresamos el programa usando apache beam, podemos usar su runner para [google Dataflow](https://cloud.google.com/dataflow) y escalar trivialmente a miles de instancias.
 
 ### Pregunta 2
 
@@ -69,6 +69,8 @@ En condiciones reales, los archivos residen en un bucket de [google cloud storag
 También podríamos usar [spark](https://spark.apache.org/), que es conceptualmente casi idéntico; la diferencia es que tendríamos que administrar nosotros el cluster de spark, y en el caso de beam + Dataflow podemos delegar todo ese tedio a google.
 
 NB. estas herramientas son de última generación y también permiten expresar operaciones en streaming: nosotros por ahora nos vamos a limitar a implementar operaciones sencillas en batch.
+
+El módulo [tarfile](https://docs.python.org/3/library/tarfile.html) de python.
 
 ## Presentación de soluciones
 
