@@ -1,6 +1,7 @@
 * [Ejercicio](#Ejercicio)
   * [Pregunta 0](#Pregunta-0)
   * [Pregunta 1](#Pregunta-1)
+  * [Pregunta 2](#Pregunta-2)
 * [Herramientas conceptuales](#Herramientas-conceptuales)
 * [Herramientas de implementación](#Herramientas-de-implementación)
 * [Presentación de soluciones](#Presentación-de-soluciones)
@@ -9,47 +10,57 @@
 
 ## Ejercicio
 
-Tenemos que construir un [índice invertido](https://en.wikipedia.org/wiki/Inverted_index) para los documentos en el directorio [./input_files](./input_files).
+Tenemos que llevar a cabo una tarea de limpieza en un bucket que contiene un montón de archivos.
 
-Un índice invertido hace fácil encontrar todos los documentos que contienen un término: si por ejemplo tenemos 2 ficheros con los siguientes contenidos:
+Antes de lanzarnos a lidiar con el bucket, vamos a resolver el problema en local con un conjunto de datos de prueba: lo haremos de forma que nuestra solución sea escalable a conjuntos de datos de petabytes con poco esfuerzo, usando [google Dataflow](https://cloud.google.com/dataflow).
 
-* 1.txt: `Pepe y paco.`
-* 2.txt: `Paco alone.`
+Los archivos son de tipo gzip, generados automáticamente por sistemas de control que chequean periódicamente la integridad de otros sistemas.
 
-un índice invertido asociará cada término a los archivos que lo contienen, por ejemplo, usando una línea por término.
+Nos hemos dado cuenta que el sistema que los genera ha introducido un bug, y en algunos archivos hay una inconsistencia entre los metadatos contenidos en los nombres del archivo y los metadatos contenidos en el archivo en sí.
+
+Los nombres de los archivos tienen la estructura `{nombre_de_check}-{iso_timestamp}.tar.gz`, eg. `check_200-2021-08-16T02:46:39.003135.tar.gz`.
+
+Cada uno de estos archivos contiene un directorio comprimido con la siguiente estructura:
 
 ```
-alone 2.txt
-paco 1.txt 2.txt
-pepe 1.txt
-y 1.txt
+├── metadata.json
+└── result.json
 ```
 
-Cuando construyamos nuestro índice invertido *normalizaremos* el texto: pasaremos todas las letras a lowercase y descartaremos puntuación.
+El archivo `metadata.json` contiene metadatos que deberían coincidir con los metadatos que son parte del nombre del fichero, eg.
+
+```json
+{"check_name": "check_200", "stamp": "2021-08-16T02:46:39.003135"}
+```
+
+Pero en algunos casos el sistema ha escrito mal el `check_name` en el fichero `metadata.json`. **El nombre contenido en el nombre del archivo siempre es correcto**.
+
+Queremos detectar los archivos con datos inconsistentes y seguidamente corregir aquellos archivos que tengan un formato erróneo.
+
 
 ### Pregunta 0
 
-Para el directorio [./input_files](./input_files):
+Para el directorio [./blobs](./blobs):
 
-Escribir un programa en python que emita un fichero donde cada línea contenga un término y una lista de archivos en los que aparece, todos separados por espacios.
-
-Tanto los términos como las listas de archivos asociadas a cada término deberán estar ordenadas alfabéticamente.
-
-Debería dar un output parecido (o idéntico) a [./index.txt](./index.txt).
+Escribir un programa en python puro, lo más sencillo posible, que arregle los archivos, dejando la colección correcta en el directorio [./clean_blobs_1](./clean_blobs_1).
 
 ### Pregunta 1
 
-Escribir un programa que haga exactamente lo mismo, pero usando [apache Beam](https://beam.apache.org/).
+Escribir un programa que haga exactamente lo mismo, pero usando [apache Beam](https://beam.apache.org/) y dejando los resultados en [./clean_blobs_2](./clean_blobs_2).
 
 Esto consiste en expresar el problema en términos de PCollections y de PTransforms, un proceso que puede ser algo tedioso y requerirá bucear en los docs.
 
 Si expresamos el programa usando beam Beam, podemos usar su runner para [google Dataflow](https://cloud.google.com/dataflow) y escalar trivialmente a miles de instancias.
 
+### Pregunta 2
+
+En condiciones reales, los archivos residen en un bucket de [google cloud storage](https://cloud.google.com/products/storage/) y hay petabytes de ellos: ¿cómo habrá que modificar la solución a la pregunta 2 para que el source y el sink sean buckets de google cloud en vez de archivos en local?
+
+¿Cómo hay que diseñar el código para poder cambiar de source y sink fácilmente?
+
 ## Herramientas conceptuales
 
 [Mapreduce](https://en.wikipedia.org/wiki/MapReduce) es un nombre para una familia de técnicas para particionar problemas y resolverlos en clusters en paralelo.
-
-La construcción de [índices invertidos](https://en.wikipedia.org/wiki/Inverted_index) es un problema extremadamente apto para mapreduce; la construcción y mantenimiento del índice de google impulsó muchas de las tecnologías para procesar grandes cantidades de datos en paralelo que ahora están comoditizadas.
 
 ## Herramientas de implementación
 
