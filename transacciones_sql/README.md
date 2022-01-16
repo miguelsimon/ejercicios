@@ -7,6 +7,8 @@ Para este ejercicio, revisar:
 
 Estamos a cargo del backend de una empresa que copia el modelo de [Bizum](https://bizum.es/en/): permite hacer transferencias de dinero entre usuarios.
 
+El código está escrito en python y se encuentra en el directorio [backend](backend).
+
 Nuestro backend está escrito en sqlite y además no usa multithreading, así que su comportamiento debería ser fácil de analizar. Tenemos una cobertura de tests unitarios decente:
 
 ```bash
