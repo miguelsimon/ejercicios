@@ -7,7 +7,11 @@ Para este ejercicio, revisar:
 
 Estamos a cargo del backend de una empresa que copia el modelo de [Bizum](https://bizum.es/en/): permite hacer transferencias de dinero entre usuarios.
 
-Nuestro backend está escrito en sqlite y además no usa multithreading, así que su comportamiento debería ser fácil de analizar. Tenemos una cobertura de tests unitarios decente.
+Nuestro backend está escrito en sqlite y además no usa multithreading, así que su comportamiento debería ser fácil de analizar. Tenemos una cobertura de tests unitarios decente:
+
+```bash
+python3 -m unittest discover backend
+```
 
 Pese a que todo parece sencillo y normal, observamos de vez en cuando un comportamiento raro: hay quejas de usuarios que mandan dinero que nunca llega a su destino. El dinero sí que desaparece de la cuenta del usuario que lo envía y nos acusan de robárselo.
 
@@ -24,3 +28,5 @@ Creemos que el problema se encuentra en la función `savings_backend.transfer(co
 #### pregunta 2
 
 ¿Cómo reescribirías la función `savings_backend.transfer(conn, user_a, user_b, transfer_amount)` para eliminar el bug sin tener que cambiar a un datacenter bueno?
+
+Asegúrate de que sigue pasando los tests unitarios con `python3 -m unittest discover backend`
