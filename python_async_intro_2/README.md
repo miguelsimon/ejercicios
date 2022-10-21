@@ -1,3 +1,23 @@
+
+
+- [conceptos](#conceptos)
+- [ejercicio](#ejercicio)
+	- [pregunta 1](#pregunta-1)
+	- [pregunta 2](#pregunta-2)
+	- [pregunta 3](#pregunta-3)
+- [usage](#usage)
+	- [install](#install)
+	- [run test_script](#run-testscript)
+	- [run tests](#run-tests)
+
+
+### conceptos
+
+Vale la pena repasar conceptualmente las formas complementarias de gestionar concurrencia que estamos tratando:
+
+* [input/output asíncrono](https://en.wikipedia.org/wiki/Asynchronous_I/O)
+* [procesos](https://en.wikipedia.org/wiki/Process_(computing)) y [threads](https://en.wikipedia.org/wiki/Thread_(computing))
+
 ### ejercicio
 
 Tenemos un servidor en [async_service/sync_server.py](async_service/sync_server.py) que expone un servicio crítico para nuestra empresa: dado un número, calcula su cuadrado eg.
