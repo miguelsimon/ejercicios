@@ -11,6 +11,7 @@ class CalculateSquareHandler(tornado.web.RequestHandler):
         squared_num = async_service.sync_backend.calculate_square(num)
         self.write(str(squared_num))
 
+
 def make_app():
     return tornado.web.Application([
         (r"/calculate_square", CalculateSquareHandler),
