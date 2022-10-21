@@ -12,6 +12,7 @@ Son ejercicios autocontenidos y sencillos; solemos plantearlos al principio de l
 * [petabyte_transformations](petabyte_transformations): transformación de datos a gran escala usando[apache Beam](https://beam.apache.org/) y [google Dataflow](https://cloud.google.com/dataflow)
 * [normalización de sql](normalizacion_sql)
 * [intro a async/await en python 3](python_async_intro)
+* [más async/await en python 3](python_async_intro_2)
 * [queries de sql](queries_sql)
 * [transacciones sql](transacciones_sql)
 * [optimización multiobjetivo](optimizacion_multiobjetivo)
