@@ -18,7 +18,7 @@ Los archivos son de tipo gzip, generados automáticamente por sistemas de contro
 
 Nos hemos dado cuenta que el sistema que los genera ha introducido un bug, y en algunos archivos hay una inconsistencia entre los metadatos contenidos en los nombres del archivo y los metadatos contenidos en el archivo en sí.
 
-Los nombres de los archivos tienen la estructura `{nombre_de_check}-{iso_timestamp}.tar.gz`, eg. `check_200-2021-08-16T02:46:39.003135.tar.gz`.
+Los nombres de los archivos tienen la estructura `{nombre_de_check}-%Y-%m-%d-%H-%M-%S-%f.tar.gz`, eg. `check_https-2021-09-26-11-33-16-003135.tar.gz`, siguiendo [las convenciones de formato de strftime()](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes).
 
 Cada uno de estos archivos contiene un directorio comprimido con la siguiente estructura:
 
