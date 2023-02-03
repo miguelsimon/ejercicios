@@ -1,0 +1,12 @@
+jupyter
+scipy==1.9
+pandas
+matplotlib
+numpy
+mypy
+jax
+jax[cpu]
+jaxlib
+flake8
+black
+isort
