@@ -14,7 +14,7 @@ Son ejercicios autocontenidos y sencillos; solemos plantearlos al principio de l
 * [intro a async/await en python 3](python_async_intro)
 * [más async/await en python 3](python_async_intro_2)
 * [queries de sql](queries_sql)
-* [aprendizaje supervisado](#supervised_learning)
+* [aprendizaje supervisado](supervised_learning)
 * [transacciones sql](transacciones_sql)
 * [optimización multiobjetivo](optimizacion_multiobjetivo)
 * [website_pruebas_git](website_pruebas_git): web estática para ensayar PRs y workflow de git trabajando sobre ella
