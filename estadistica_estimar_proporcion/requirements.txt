@@ -1,0 +1,4 @@
+jupyter
+scipy==1.9
+matplotlib
+numpy
