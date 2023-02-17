@@ -32,10 +32,10 @@ You can run this using the standard python docker image: this command will launc
 
 ```bash
 docker run -it --rm \
-  -v $(pwd):/supervised_learning \
+	-v $(pwd):/supervised_learning \
 	-p 8888:8888 \
 	--workdir /supervised_learning \
-  python:3.10 /bin/bash
+	python:3.10 /bin/bash
 ```
 
 You can execute the install in the docker container, run jupyter in the container and point your browser to the appropriate url (read the output of the `jupyter notebook` command):
