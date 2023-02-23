@@ -13,6 +13,8 @@ El problema es extremadamente sencillo, pero las técnicas y herramientas introd
 
 JAX seems to work on linux and OS X but is tricky on windows, if you run into install problems you might want to run this inside docker as described below.
 
+Jax pip install [doesn't run on arm linuxes at the moment](https://github.com/google/jax/issues/13608) so if you need to run on this you might try [miniconda](https://conda.io/projects/conda/en/stable/index.html).
+
 ### install
 
 ```bash
