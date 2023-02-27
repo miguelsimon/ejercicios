@@ -245,7 +245,7 @@ def plot_simulation(df, events):
     ax.set_ylim((SPECS['MIN_LEVEL_METRES'] -1, SPECS['MAX_LEVEL_METRES'] + 1))
     ax.set_xlabel("seconds")
     ax.plot(df["time"], df["level"], "g")
-    ax.plot(df["time"], df["setpoint"], "r--")
+    ax.plot(df["time"], df["setpoint"], "r--", label='setpoint')
 
     ax2.set_ylim((-0.1, 1.1))
     ax2.set_ylabel("in_signal", color="b")
@@ -254,6 +254,8 @@ def plot_simulation(df, events):
     for event in events:
         ax.axvline(event["time"], color="black")
         ax.text(event["time"], 0, event["type"], rotation=270)
+
+    ax.legend(loc="upper left")
 
     return f, ax
 
