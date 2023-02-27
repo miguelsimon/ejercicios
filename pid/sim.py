@@ -220,7 +220,7 @@ def simulate_strange(controller):
         controller=controller,
         environment=environment,
     )
-    sim.run(100)
+    sim.run(150)
     return sim.state.get_dataframe(), sim.environment.get_events()
 
 
