@@ -14,6 +14,7 @@ Son ejercicios autocontenidos y sencillos; solemos plantearlos al principio de l
 * [intro a async/await en python 3](python_async_intro)
 * [más async/await en python 3](python_async_intro_2)
 * [queries de sql](queries_sql)
+* [control industrial con PIDs](pid)
 * [aprendizaje supervisado](supervised_learning)
 * [transacciones sql](transacciones_sql)
 * [optimización multiobjetivo](optimizacion_multiobjetivo)
