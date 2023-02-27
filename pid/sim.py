@@ -4,27 +4,29 @@ import matplotlib.pyplot as plt
 import unittest
 
 SPECS = dict(
-    CYLINDER_RADIUS_METRES = 2.0,
-    MIN_LEVEL_METRES = 0.0,
-    MAX_LEVEL_METRES = 7.0,
-    IN_PIPE_RADIUS_METRES = 20 / 100.0,
-    OUT_PIPE_RADIUS_METRES = 100 / 100.0,
-    IN_MAX_FLOW_RATE_M3_S = 5.0,
-    DEMAND_BASELINE_RATE_M3_S = 0.5,
-    OUT_MAX_FLOW_RATE_M3_S = 80.0,
+    CYLINDER_RADIUS_METRES=2.0,
+    MIN_LEVEL_METRES=0.0,
+    MAX_LEVEL_METRES=7.0,
+    IN_PIPE_RADIUS_METRES=20 / 100.0,
+    OUT_PIPE_RADIUS_METRES=100 / 100.0,
+    IN_MAX_FLOW_RATE_M3_S=5.0,
+    DEMAND_BASELINE_RATE_M3_S=0.5,
+    OUT_MAX_FLOW_RATE_M3_S=80.0,
 )
 
+
 def m3_to_level(m3):
-    section = np.pi * SPECS['CYLINDER_RADIUS_METRES'] ** 2
+    section = np.pi * SPECS["CYLINDER_RADIUS_METRES"] ** 2
     return m3 / section
 
+
 def level_to_m3(level):
-    section = np.pi * SPECS['CYLINDER_RADIUS_METRES'] ** 2
+    section = np.pi * SPECS["CYLINDER_RADIUS_METRES"] ** 2
     return level * section
+
 
 class State:
     def __init__(self, m3_0, demand_0):
-
         self.t = [0.0]
         self.m3 = [m3_0]
         self.demand = [demand_0]
@@ -52,10 +54,10 @@ class State:
 
         demand = self.demand[-1]
         m3 = self.m3[-1]
-        m3_max = level_to_m3(SPECS['MAX_LEVEL_METRES'])
+        m3_max = level_to_m3(SPECS["MAX_LEVEL_METRES"])
 
-        in_flow = in_signal * SPECS['IN_MAX_FLOW_RATE_M3_S'] * dt
-        out_flow = min(SPECS['OUT_MAX_FLOW_RATE_M3_S'] * dt, demand)
+        in_flow = in_signal * SPECS["IN_MAX_FLOW_RATE_M3_S"] * dt
+        out_flow = min(SPECS["OUT_MAX_FLOW_RATE_M3_S"] * dt, demand)
 
         net_flow = in_flow - out_flow
 
@@ -77,7 +79,6 @@ class State:
             "time": self.t,
             "m3": self.m3,
             "demand": self.demand,
-
             "setpoint": [0.0] + self.setpoint,
             "controller_output": [0.0] + self.controller_output,
             "delta_demand": [0.0] + self.delta_demand,
@@ -87,7 +88,7 @@ class State:
         }
 
         df = pd.DataFrame(d)
-        df['level'] = m3_to_level(df['m3'])
+        df["level"] = m3_to_level(df["m3"])
         return df
 
 
@@ -121,40 +122,21 @@ class Sim:
             self.step()
 
 
-class Controller:
-    def __init__(self, kp, ki, kd):
-        self.kp = kp
-        self.ki = ki
-        self.kd = kd
-
-        self.dt = None
-        self.setpoint = None
-        self.integrated_error = None
-        self.last_error = None
-
+class TrivialController:
     def initialize_controller(self, v, dt):
-        self.dt = dt
-        self.integrated_error = 0
-        self.last_error = 0
+        pass
 
     def change_setpoint(self, setpoint):
-        self.setpoint = setpoint
+        pass
 
     def get_output(self, v):
-        dt = self.dt
-
-        error = self.setpoint - v
-        derror_dt = (error - self.last_error) / dt
-        self.integrated_error += error * dt
-        self.last_error = error
-
-        return error * self.kp + self.ki * self.integrated_error + self.kd * derror_dt
+        return 0
 
 
 class Environment:
     def __init__(self, initial_setpoint, initial_delta_demand, events):
         self.events = events
-        self.event_queue = sorted(events, key=lambda d: -d['time'])
+        self.event_queue = sorted(events, key=lambda d: -d["time"])
 
         self.t = [0]
         self.setpoint = [initial_setpoint]
@@ -168,7 +150,7 @@ class Environment:
 
     def step(self, dt):
         self.t.append(self.t[-1] + dt)
-        self.delta_demand.append(dt * SPECS['DEMAND_BASELINE_RATE_M3_S'])
+        self.delta_demand.append(dt * SPECS["DEMAND_BASELINE_RATE_M3_S"])
         self.setpoint.append(self.setpoint[-1])
 
         while self.is_event_pending():
@@ -202,10 +184,12 @@ def simulate_normal(controller):
         {"time": 5, "type": "add_demand", "m3": 9.0},
         {"time": 8, "type": "add_demand", "m3": 4.0},
     ]
-    environment = Environment(initial_setpoint = 5.0, initial_delta_demand=0.0, events=events)
+    environment = Environment(
+        initial_setpoint=5.0, initial_delta_demand=0.0, events=events
+    )
 
     dt = 0.01
-    state = State(m3_0 = level_to_m3(5.0), demand_0 = 0.0)
+    state = State(m3_0=level_to_m3(5.0), demand_0=0.0)
     sim = Sim(
         dt=dt,
         state=state,
@@ -215,18 +199,21 @@ def simulate_normal(controller):
     sim.run(10)
     return sim.state.get_dataframe(), sim.environment.get_events()
 
+
 def simulate_strange(controller):
     """
     demonstrate integral windup
     """
 
     events = [
-        #{"time": 2, "type": "change_setpoint", "setpoint": 2.0},
+        # {"time": 2, "type": "change_setpoint", "setpoint": 2.0},
     ]
-    environment = Environment(initial_setpoint = 5.0, initial_delta_demand=0.0, events=events)
+    environment = Environment(
+        initial_setpoint=5.0, initial_delta_demand=0.0, events=events
+    )
 
     dt = 0.01
-    state = State(m3_0 = level_to_m3(0.0), demand_0 = 0.0)
+    state = State(m3_0=level_to_m3(0.0), demand_0=0.0)
     sim = Sim(
         dt=dt,
         state=state,
@@ -242,10 +229,10 @@ def plot_simulation(df, events):
     ax2 = ax.twinx()
 
     ax.set_ylabel("level", color="g")
-    ax.set_ylim((SPECS['MIN_LEVEL_METRES'] -1, SPECS['MAX_LEVEL_METRES'] + 1))
+    ax.set_ylim((SPECS["MIN_LEVEL_METRES"] - 1, SPECS["MAX_LEVEL_METRES"] + 1))
     ax.set_xlabel("seconds")
     ax.plot(df["time"], df["level"], "g")
-    ax.plot(df["time"], df["setpoint"], "r--", label='setpoint')
+    ax.plot(df["time"], df["setpoint"], "r--", label="setpoint")
 
     ax2.set_ylim((-0.1, 1.1))
     ax2.set_ylabel("in_signal", color="b")
@@ -262,9 +249,9 @@ def plot_simulation(df, events):
 
 class Test(unittest.TestCase):
     def test_simulate_normal(self):
-        controller = Controller(1.0, 0.0, 0.0)
+        controller = TrivialController()
         simulate_normal(controller)
 
     def test_simulate_strange(self):
-        controller = Controller(1.0, 0.0, 0.0)
+        controller = TrivialController()
         simulate_strange(controller)
