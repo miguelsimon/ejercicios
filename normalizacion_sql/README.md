@@ -26,15 +26,15 @@ create table people (
 
 insert into
   people(dni, firstname, lastname, address_1, pet_names)
-  values("93434423F", "isaac", "newton", "lauria 27, valencia", "paul,polly,peter");
+  values('93434423F', 'isaac', 'newton', 'lauria 27, valencia', 'paul,polly,peter');
 
 insert into
   people(dni, firstname, lastname, address_1)
-  values("73434423F", "e.t.", "jaynes", "lauria 28, valencia");
+  values('73434423F', 'e.t.', 'jaynes', 'lauria 28, valencia');
 
 insert into
   people(dni, firstname, lastname, address_1, address_2, pet_names)
-  values("53434423F", "george", "polya", "colon 01, valencia",  "tapineria 33, betera", "pepe");
+  values('53434423F', 'george', 'polya', 'colon 01, valencia',  'tapineria 33, betera', 'pepe');
 ```
 
 Pero ahora se encuentra con un problema; E.T. Jaynes le ha traído a Madonna como clienta, que presenta varias dificultades, entre ellas que tiene 3 residencias distintas; ha apuntado los datos en una servilleta provisionalmente mientras espera a que cambies el diseño de la base de datos para acomodarla:
