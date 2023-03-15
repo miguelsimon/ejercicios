@@ -55,31 +55,31 @@ create table sueldos (
   euros_hour float not null
 );
 
-insert into empleados_macastre(id, name) values (0, "juana juanez");
-insert into empleados_macastre(id, name) values (1, "pepe pepez");
+insert into empleados_macastre(id, name) values (0, 'juana juanez');
+insert into empleados_macastre(id, name) values (1, 'pepe pepez');
 
-insert into sueldos (employee_name, euros_hour) values ("juana juanez", 0.6);
-insert into sueldos (employee_name, euros_hour) values ("pepe pepez", 0.75);
-insert into sueldos (employee_name, euros_hour) values ("martin martinez", 0.70);
-insert into sueldos (employee_name, euros_hour) values ("dr. maria lopez", 1.05);
+insert into sueldos (employee_name, euros_hour) values ('juana juanez', 0.6);
+insert into sueldos (employee_name, euros_hour) values ('pepe pepez', 0.75);
+insert into sueldos (employee_name, euros_hour) values ('martin martinez', 0.70);
+insert into sueldos (employee_name, euros_hour) values ('dr. maria lopez', 1.05);
 
-insert into proyectos(id, name, description) values(1, "ultrayogur", "");
+insert into proyectos(id, name, description) values(1, 'ultrayogur', '');
 insert into horas_macastre (employee_id, project_id, hours) values (0, 1, 10);
 insert into horas_macastre (employee_id, project_id, hours) values (0, 1, 22);
 insert into horas_macastre (employee_id, project_id, hours) values (1, 1, 5);
-insert into horas_valencia (employee_name, project_name, hours) values ("martin martinez", "ultrayogur", 18);
-insert into acelerador_particulas(project_name, euros) values ("ultrayogur", 2);
+insert into horas_valencia (employee_name, project_name, hours) values ('martin martinez', 'ultrayogur', 18);
+insert into acelerador_particulas(project_name, euros) values ('ultrayogur', 2);
 
-insert into proyectos(id, name, description) values(2, "megayogur", "");
+insert into proyectos(id, name, description) values(2, 'megayogur', '');
 insert into horas_macastre (employee_id, project_id, hours) values (1, 2, 10);
-insert into horas_valencia (employee_name, project_name, hours) values ("martin martinez", "megayogur", 6);
-insert into horas_valencia (employee_name, project_name, hours) values ("dr. maria lopez", "megayogur", 8);
-insert into horas_valencia (employee_name, project_name, hours) values ("dr. maria lopez", "megayogur", 23);
-insert into acelerador_particulas(project_name, euros) values ("megayogur", 1);
-insert into acelerador_particulas(project_name, euros) values ("megayogur", 2);
-insert into acelerador_particulas(project_name, euros) values ("megayogur", 8);
+insert into horas_valencia (employee_name, project_name, hours) values ('martin martinez', 'megayogur', 6);
+insert into horas_valencia (employee_name, project_name, hours) values ('dr. maria lopez', 'megayogur', 8);
+insert into horas_valencia (employee_name, project_name, hours) values ('dr. maria lopez', 'megayogur', 23);
+insert into acelerador_particulas(project_name, euros) values ('megayogur', 1);
+insert into acelerador_particulas(project_name, euros) values ('megayogur', 2);
+insert into acelerador_particulas(project_name, euros) values ('megayogur', 8);
 
-insert into proyectos(id, name, description) values(3, "jahgur", "");
+insert into proyectos(id, name, description) values(3, 'jahgur', '');
 insert into horas_macastre (employee_id, project_id, hours) values (0, 3, 12);
 insert into horas_macastre (employee_id, project_id, hours) values (0, 3, 10);
 insert into horas_macastre (employee_id, project_id, hours) values (1, 3, 3);
