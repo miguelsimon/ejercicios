@@ -26,9 +26,9 @@ Queremos combinar los datos de los pacientes adultos y menores de edad para pode
 
 Crea una view que contenga las siguientes columnas para todos los participantes, tanto menores como adultos:
 
-* age: edad del participante en años en el momento del estudio
-* hours_per_week: horas de ejercicio por semana medias que realiza el participante
-* mmol_per_l: el nivel de thanatol medido en sangre del paciente, en milimoles por litro
+* `age`: edad del participante en años en el momento del estudio
+* `hours_per_week`: horas de ejercicio por semana medias que realiza el participante
+* `mmol_per_l`: el nivel de thanatol medido en sangre del paciente, en milimoles por litro
 
 #### ejercicio 2
 
