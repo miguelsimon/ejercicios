@@ -15,7 +15,7 @@ Hay 2 compañías que han desarrollado tests para diagnóstico precoz y han llev
 * La megapharma GSKPAZ ha desarrollado un test llamado `ultradetect` con una [accuracy (o exactitud)](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) de *99.3%*, con datos del trial en [ultradetect_trial.csv](ultradetect_trial.csv)
 * Un equipo universitario infrafinanciado ha desarrollado un test llamado `test_b` con una accuracy de *92.1%*, con datos del trial en [test_b_trial.csv](test_b_trial.csv)
 
-Vistos los datos de accuracy en el "viaje de trabajo" a Hawaii financiado por GSKPAZ, el Ministerio de Sanidad está a punto de aprobar una campaña de screening masivo usando el test `ultradetect` pero a un funcionario de bajo nivel le huele a chamusquina y te ha encargado que verifiques los cálculos y las conclusiones.
+Vistos los datos de accuracy en el "viaje de trabajo" a Hawaii financiado por GSKPAZ, el Ministerio de Sanidad está a punto de aprobar una campaña de screening masivo usando el test `ultradetect` pero a un funcionario de bajo nivel [le huele a chamusquina](https://en.wikipedia.org/wiki/Bad_Pharma) y te ha encargado que verifiques los cálculos y las conclusiones.
 
 Los datos de los trials vienen en csv, con las siguientes columnas:
 
