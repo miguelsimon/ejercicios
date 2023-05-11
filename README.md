@@ -10,6 +10,7 @@ Son ejercicios autocontenidos y sencillos; solemos plantearlos al principio de l
 * [conceptos git](conceptos_git)
 * [data fusion](data_fusion): optimizar un algoritmo de data fusion
 * [data_science_1](data_science_1): procesa, visualiza e interpreta los datos de un estudio observacional
+* [data_science_2](data_science_2): evalúa distintos clasificadores binarios
 * [petabyte_transformations](petabyte_transformations): transformación de datos a gran escala usando[apache Beam](https://beam.apache.org/) y [google Dataflow](https://cloud.google.com/dataflow)
 * [normalización de sql](normalizacion_sql)
 * [intro a async/await en python 3](python_async_intro)
