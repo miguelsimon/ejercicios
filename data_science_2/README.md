@@ -24,7 +24,7 @@ Los datos de los trials vienen en csv, con las siguientes columnas:
 
 #### ejercicio 0
 
-Como los trials han usado muestras poblacionales aleatorias podemos estimar [la prevalencia](https://es.wikipedia.org/wiki/Prevalencia) del FIC haciendo pooling de los datos de ambos trials.
+Como los trials han usado muestras poblacionales aleatorias podemos estimar [la prevalencia](https://en.wikipedia.org/wiki/Prevalence) del FIC haciendo [pooling](https://en.wikipedia.org/wiki/Pooled_analysis) de los datos de enfermos reales de ambos trials.
 
 Calcula la prevalencia del FIC como porcentaje de la población.
 
